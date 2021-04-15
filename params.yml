@@ -1,8 +1,8 @@
-nb_item: 10000
-pool_add_random_low: 1
-pool_add_random_high: 10
-pool_keep_best: 500
-pool_size: 1000
+nb_item: 50000
+pool_add_random_low: 10
+pool_add_random_high: 50
+pool_keep_best: 200
+pool_size: 500
 rounds: 500
 sack_max_weight: 5000000
 value_max: 100000

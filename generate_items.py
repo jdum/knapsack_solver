@@ -50,13 +50,14 @@ def generate_items(p):
     w_range = p["weight_max"] - p["weight_min"] + 1
     v_min = p["value_min"]
     v_range = p["value_max"] - p["value_min"] + 1
-    items = []
-    for _i in range(p["nb_item"]):
+    sitems = set()
+    cardinal = p["nb_item"]
+    while len(sitems) < cardinal:
         w = randbelow(w_range) + w_min
         v = w * randbelow(v_range) + v_min
         # v = w * randbelow(v_range) + randbelow(w) + v_min
-        items.append(Item(w, v))
-    return items
+        sitems.add(Item(w, v))
+    return list(sitems)
 
 
 def print_info_items(items):
